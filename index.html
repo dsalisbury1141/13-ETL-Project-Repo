@@ -1,0 +1,128 @@
+ <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+          <!--CSS Styles Link-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+      
+
+        <title>12-ETL-Project</title>
+        <style type="text/css">
+            .row div {
+                border: 1px solid silver;
+            }
+        </style>
+    </head>
+   
+  <body>
+        <!--Navigation Bar Bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ELT Project Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  
+                </li>
+                <li class="nav-item">
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Project Resources
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="earthquake.html">Data</a>
+                    <a class="dropdown-item" href="Humidity.html">Data API</a>
+                    
+                  </div>
+                </li>
+                <li class="nav-item">
+                  
+                </li>
+              </ul>
+             
+            </div>
+          </nav>
+          </nav>
+                  
+            <div class="container-fluid" style="margin-top:30px;">
+              <H1 >Welcome our ETL Project Report</h1>
+                <div class="row">           
+                
+                    <div class="col-sm-2 col-md-8" style = "border-style:none;">
+                      <img src="Images/redcross.jpg"  alt"ETL"align="left">
+                  
+                
+                      
+                      
+  <p class=p2>
+                      Data sources
+These two locations were chosen because of their high volumes of earthquakes identified by the    geological scientist. 
+
+<p> Data cleanup using Jupyter lab </p>
+<ul> 
+	 <li>The Turkey dataset was in Turkish, first step was to translate the headers from Turkish to English, 
+   then review the data for consistency, after researching the language translations we used ".rename"  to translate the headers. </li> 
+  <li>After comparing both datasets we removed several columns from each dataset as the data was not needed. </li>
+ 	 <li>The data format was modified on both datasets to match using "pd.to_datetime"</li>
+    <li> Created 2 new DataFrames  selecting columns that matched both .csv's, using</li>
+
+  
+</ul>
+<p>Joining and transferring to SQL</p>
+<ul>
+  <li> Created a new data set called earthquake.db by joining bot dataset to one large dataset, using "pd.concat"</li>
+  <li>Took the new larger DataFrame and exported to .csv using  ".to_csv"</li>
+  <li>Transferred the new larger database to SQLite by using  the folloing code line: </li>
+</ul>
+
+<p> Website creation</p>  
+<ul>            
+    <li>Created homepage using html:5 template to get started</li>
+    <li>Transeformed .CSV file using code ".to_html" </li>
+    <li>Using Bootstrap navigation headers, containers and grids as well as styles.css file to bring the page to life.</li>
+    <li>Researched Goolge for free images to add for visuals</li>
+    <li> Updated all links within the document to ensure they work</li>
+  </ul>
+
+<p> Data sources</p>  
+<ul>            
+    <li>These two locations were chosen because of their high volumes of earthquakes identified by the geological scientist</li>
+    <p2> https://www.kaggle.com/astefopoulos/earthquakes-in-greece-19012018</p2>
+    <p></P>
+    <p2> https://www.kaggle.com/caganseval/earthquake</p2>
+  </ul>
+            </div>
+             
+
+              <div class="col-sm-2 col-md-3" style = "border-style:none;">
+                <h2> Location Maps </h2>   
+                       
+                       <a> <img src="Images/Japan2.jpg" alt="Japan Map" style="padding-bottom:10px"></a></br>
+                       <a> <img src="Images/Turkey270.png" alt="Turkey Map" xclass="img-thumbnail"></a>
+                        
+                    </div>                          
+                
+                 
+                
+            </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+   <div class="footer" >
+<p3>Christina Suckow, Dawn Salisbury 2020, UCF-Coding-Boot-Camp 2020</P>
+<div> 
+   
+    </body>
+</html>
