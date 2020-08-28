@@ -3,9 +3,7 @@
 *Please follow this link to our github website https://dsalisbury1141.github.io/13-ETL-Project-Repo/*
 
 ## Welcome our ETL Project Report
-
 <img src="https://github.com/dsalisbury1141/13-ETL-Project-Repo/blob/master/Images/redcross.jpg" width="200">
-
 ## Japan and Turkey were chosen because of their high volume of earthquakes identified by geological scientists.
 
 <img src="https://github.com/dsalisbury1141/13-ETL-Project-Repo/blob/master/Images/turkey270.png" width="200">
