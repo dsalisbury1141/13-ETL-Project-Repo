@@ -1,0 +1,150 @@
+ <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+          <!--CSS Styles Link-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+      
+
+        <title>12-ETL-Project</title>
+        <style type="text/css">
+            .row div {
+                border: 1px solid silver;
+            }
+        </style>
+    </head>
+   
+  <body>
+        <!--Navigation Bar Bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ELT Project Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  
+                </li>
+                <li class="nav-item">
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Project Resources
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="earthquake.html">Data</a>
+                    <a class="dropdown-item" href="Humidity.html">Data API</a>
+                    
+                  </div>
+                </li>
+                <li class="nav-item">
+                  
+                </li>
+              </ul>
+             
+            </div>
+          </nav>
+          </nav>
+                  
+            <div class="container-fluid" style="margin-top:30px;">
+              <H1 >Welcome our ETL Project Report</h1>
+                <div class="row">           
+                
+                    <div class="col-sm-2 col-md-8" style = "border-style:none;">
+                      <img src="Images/redcross.jpg"  alt"ETL"align="left">
+                  
+                
+                      
+                      
+  <p><span style="font-weight:800">
+                    
+Japan and Turkey were chosen because of their high volume of earthquakes identified by geological scientists. </span> </p>
+
+<p> Data Cleanup Using Jupyter Lab </p>
+<ul> 
+	 <li>The Turkey dataset was in Turkish, the headers had to be translated from Turkish to English.  
+   then review the data for consistency, after researching the language translations we used <span style="font-weight:800">".rename"</span> to translate the headers. </li> 
+  <li>After comparing both datasets we removed several columns from each dataset as the data was not needed. </li>
+ 	 <li>The data format was modified on both datasets to match using <span style="font-weight:800">"pd.to_datetime"<span></li>
+    <li> Created 2 new DataFrames  selecting columns that matched both .csv's, using</li>
+
+  
+</ul>
+<p>Joining and Transferring to SQL</p>
+<ul>
+  <li> Created a new data set called <span style="font-weight:600">earthquake.db</span> by joining bot dataset to one large dataset, using <span style="font-weight:800">"pd.concat"<span></li>
+  <li>Took the new larger DataFrame and exported to .csv using <span style="font-weight:800">".to_csv"</span> </li>
+  <li>Transferred the new larger database to SQLite by using  the following code line:</p> 
+  <span style="font-weight:700">"earthquake_db.to_sql(name="earthquake2", con=create_engine("sqlite:///my_db.sqlite"))"</span> </li>
+</ul>
+
+<p> ERD Image</p>
+ <a><img src="Images/ERD.png" alt="Turkey Map" xclass="img-thumbnail"></a>
+<p>
+<p>
+<p>Website Creation Using VS Code</p>
+<ul>            
+    <li>Created "index" homepage using <span style="font-weight:800">html:5</span> template to get started</li>
+    <li> Worked together to create the porject report, updated verbiage to desribe all details to create this team project</li>
+    <li>Transeformed .CSV file using code <span style="font-weight:800">".to_html" to fill the Data page</span> </li>
+    <li>Using <span style="font-weight:600">Bootstrap</span> navigation headers, containers and grids as well as <span style="font-weight:600">styles.css</span> file to bring the page to life.</li>
+    <li>Researched Google looking for free images to add for visuals</li>
+    <li>Updated all links within the document to ensure they work</li>
+    <li>
+  </ul>
+
+<p>Data Sources</p>  
+<ul>            
+    <li>These two locations were chosen because of their high volumes of earthquakes identified by the geological scientist</li>
+    <p2> https://www.kaggle.com/aerodinamicc/earthquakes-in-japan</p2>
+    <p></P>
+    <p2> https://www.kaggle.com/burakgungor/earthquakes19002019turkey</p2>
+  </ul>
+  <p> Challenges faced during this project </p>
+  <ul>
+    <li> One of the largest challenges were choosing the right subject and suitable dataset to use for this journey. 
+    The exploration began with Kaggle.com and Data.world, our first topic we explored was earthquake data, but also 
+    explored UFO data. We quickly learned that the dataset for the UFO available were scarce and many had duplicate occurrences. 
+    We decided to go back to the earthquake dataset because there were more definitive datasets and sources.</li>
+    <li>One we decided on the right topic for this project, we created the project proposal ad received approval. 
+    We began to review and wrangle the data. We started with Japan and Greece, and quickly learned that the Greece dataset was not as robust as we needed. 
+    We went back to look for another data source more comparable to the Japan dataset. We also learned that Turkey and Japan had a high count of earthquakes than in other nations. 
+    This made the perfect comparison dataset. The setback was that the Turkey dataset was in Turkish, 
+    so we determined that the data was important and the headers needed to be translated to help join the data later in the project.</li>
+    <li>We used Jupyter lab to clean and organize the data, then imported the two files to PGadmin to join the data sources. 
+    We learned that because the datasets had identical headers that it was best to use SQLite, since there was no primary key available.</li>
+    
+    
+            </div>
+             
+
+              <div class="col-sm-2 col-md-3" style = "border-style:none;">
+                <h2> Location Maps </h2>   
+                       
+                       <a> <img src="Images/Japan2.jpg" alt="Japan Map" style="padding-bottom:10px"></a></br>
+                       <a> <img src="Images/turkey270.png" alt="Turkey Map" xclass="img-thumbnail"></a>
+                        
+                    </div>                          
+                
+                 
+                
+            </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+   <div class="footer" >
+<p3>Christina Suckow, Dawn Salisbury 2020, UCF-Coding-Boot-Camp 2020</P>
+<div> 
+   
+    </body>
+</html>

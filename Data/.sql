@@ -1,0 +1,13 @@
+
+DROP Table japan
+CREATE TABLE Japan(
+	date VARCHAR NOT NULL,
+	place VARCHAR(50) NOT NULL,
+	latitude VARCHAR NOT NULL,
+	longitude VARCHAR NOT NULL,
+	depth VARCHAR NOT NULL,
+	mag VARCHAR NOT NULL
+
+);
+SELECT * FROM Japan;
+
