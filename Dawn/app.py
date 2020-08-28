@@ -1,20 +1,31 @@
-from flask import Flask, Response
+from flask import Flask, Response, jsonify
 import pandas as pd
 from sqlalchemy import create_engine
-#from config import cxnstring
+
 
 app = Flask(__name__)
 
-engine = create_engine(cxnstring, pool_recycle=3600)
+conn="sqlite:///my_db.sqlite"
+
+engine = create_engine(conn, pool_recycle=3600)
 
 @app.route("/")
 def index():
     return "<h1>Deployed!</h1>"
 
-@app.route("/sqltest")
+
+@app.route("/longitude")
+def longitude():
+    response = pd.read_sql("SELECT * FROM earthquake2 LIMIT 10", engine)
+    istype=type(response)
+    return istype
+
+@app.route("/latitude")
 def psqltest():
-    response = pd.read_sql("SELECT * FROM earthquake LIMIT 10", engine)
-    return Response(response.to_json(orient="records", date_format="iso"), mimetype="application/json")
+    #response = pd.read_sql("SELECT * FROM longitude LIMIT 10", engine)
+    #result= jsonify(response)
+    result="latitude"
+    return result
 
 if __name__ == "__main__":
     app.run()

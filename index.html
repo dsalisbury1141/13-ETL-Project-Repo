@@ -62,43 +62,65 @@
                 
                       
                       
-  <p class=p2>
-                      Data sources
-These two locations were chosen because of their high volumes of earthquakes identified by the    geological scientist. 
+  <p><span style="font-weight:800">
+                    
+Japan and Turkey were chosen because of their high volume of earthquakes identified by geological scientists. </span> </p>
 
-<p> Data cleanup using Jupyter lab </p>
+<p> Data Cleanup Using Jupyter Lab </p>
 <ul> 
-	 <li>The Turkey dataset was in Turkish, first step was to translate the headers from Turkish to English, 
-   then review the data for consistency, after researching the language translations we used ".rename"  to translate the headers. </li> 
+	 <li>The Turkey dataset was in Turkish, the headers had to be translated from Turkish to English.  
+   then review the data for consistency, after researching the language translations we used <span style="font-weight:800">".rename"</span> to translate the headers. </li> 
   <li>After comparing both datasets we removed several columns from each dataset as the data was not needed. </li>
- 	 <li>The data format was modified on both datasets to match using "pd.to_datetime"</li>
+ 	 <li>The data format was modified on both datasets to match using <span style="font-weight:800">"pd.to_datetime"<span></li>
     <li> Created 2 new DataFrames  selecting columns that matched both .csv's, using</li>
 
   
 </ul>
-<p>Joining and transferring to SQL</p>
+<p>Joining and Transferring to SQL</p>
 <ul>
-  <li> Created a new data set called earthquake.db by joining bot dataset to one large dataset, using "pd.concat"</li>
-  <li>Took the new larger DataFrame and exported to .csv using  ".to_csv"</li>
-  <li>Transferred the new larger database to SQLite by using  the folloing code line: </li>
+  <li> Created a new data set called <span style="font-weight:600">earthquake.db</span> by joining bot dataset to one large dataset, using <span style="font-weight:800">"pd.concat"<span></li>
+  <li>Took the new larger DataFrame and exported to .csv using <span style="font-weight:800">".to_csv"</span> </li>
+  <li>Transferred the new larger database to SQLite by using  the following code line:</p> 
+  <span style="font-weight:700">"earthquake_db.to_sql(name="earthquake2", con=create_engine("sqlite:///my_db.sqlite"))"</span> </li>
 </ul>
 
-<p> Website creation</p>  
+<p> ERD Image</p>
+ <a><img src="Images/ERD.png" alt="Turkey Map" xclass="img-thumbnail"></a>
+<p>
+<p>
+<p>Website Creation Using VS Code</p>
 <ul>            
-    <li>Created homepage using html:5 template to get started</li>
-    <li>Transeformed .CSV file using code ".to_html" </li>
-    <li>Using Bootstrap navigation headers, containers and grids as well as styles.css file to bring the page to life.</li>
-    <li>Researched Goolge for free images to add for visuals</li>
-    <li> Updated all links within the document to ensure they work</li>
+    <li>Created "index" homepage using <span style="font-weight:800">html:5</span> template to get started</li>
+    <li> Worked together to create the porject report, updated verbiage to desribe all details to create this team project</li>
+    <li>Transeformed .CSV file using code <span style="font-weight:800">".to_html" to fill the Data page</span> </li>
+    <li>Using <span style="font-weight:600">Bootstrap</span> navigation headers, containers and grids as well as <span style="font-weight:600">styles.css</span> file to bring the page to life.</li>
+    <li>Researched Google looking for free images to add for visuals</li>
+    <li>Updated all links within the document to ensure they work</li>
+    <li>
   </ul>
 
-<p> Data sources</p>  
+<p>Data Sources</p>  
 <ul>            
     <li>These two locations were chosen because of their high volumes of earthquakes identified by the geological scientist</li>
-    <p2> https://www.kaggle.com/astefopoulos/earthquakes-in-greece-19012018</p2>
+    <p2> https://www.kaggle.com/aerodinamicc/earthquakes-in-japan</p2>
     <p></P>
-    <p2> https://www.kaggle.com/caganseval/earthquake</p2>
+    <p2> https://www.kaggle.com/burakgungor/earthquakes19002019turkey</p2>
   </ul>
+  <p> Challenges faced during this project </p>
+  <ul>
+    <li> One of the largest challenges were choosing the right subject and suitable dataset to use for this journey. 
+    The exploration began with Kaggle.com and Data.world, our first topic we explored was earthquake data, but also 
+    explored UFO data. We quickly learned that the dataset for the UFO available were scarce and many had duplicate occurrences. 
+    We decided to go back to the earthquake dataset because there were more definitive datasets and sources.</li>
+    <li>One we decided on the right topic for this project, we created the project proposal ad received approval. 
+    We began to review and wrangle the data. We started with Japan and Greece, and quickly learned that the Greece dataset was not as robust as we needed. 
+    We went back to look for another data source more comparable to the Japan dataset. We also learned that Turkey and Japan had a high count of earthquakes than in other nations. 
+    This made the perfect comparison dataset. The setback was that the Turkey dataset was in Turkish, 
+    so we determined that the data was important and the headers needed to be translated to help join the data later in the project.</li>
+    <li>We used Jupyter lab to clean and organize the data, then imported the two files to PGadmin to join the data sources. 
+    We learned that because the datasets had identical headers that it was best to use SQLite, since there was no primary key available.</li>
+    
+    
             </div>
              
 
