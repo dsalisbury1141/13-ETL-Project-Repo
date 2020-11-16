@@ -1,4 +1,4 @@
-# EarthQuake data for Japan and Turkey
+# Earthquake data for Japan and Turkey
 
 *Link to my github website https://dsalisbury1141.github.io/13-ETL-Project-Repo/*
 
