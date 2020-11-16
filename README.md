@@ -1,9 +1,8 @@
-# 13-ETL-Project-Repo 
-## Authors Christina Suckow and Dawn Salisbury
+# EarthQuake data for Japan and Turkey
 
-*Please follow this link to our github website https://dsalisbury1141.github.io/13-ETL-Project-Repo/*
+*Link to my github website https://dsalisbury1141.github.io/13-ETL-Project-Repo/*
 
-*Please follow this link to our externally deployed http://myprojectrepo.com/*
+*Link to my externally deployed http://myprojectrepo.com/*
 
 
 ## Welcome our ETL Project Report
