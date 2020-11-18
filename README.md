@@ -48,3 +48,8 @@ These two locations were chosen because of their high volumes of earthquakes ide
 https://www.kaggle.com/aerodinamicc/earthquakes-in-japan
 
 https://www.kaggle.com/burakgungor/earthquakes19002019turkey
+
+
+How to run my code:
+	1. Open link above to run deployed site
+	2. Download my repository and run Index page on local host
